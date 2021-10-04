@@ -1,0 +1,124 @@
+/* Pizza box */
+
+.pizza-box{
+    height: 40px;
+    width: 250px;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(160deg);
+
+    animation: anim 10s linear infinite;
+}
+
+@keyframes anim {
+    0%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+}
+
+/* Pizza box - bottom */
+
+.box-bottom{
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+
+    transform-style: preserve-3d;
+}
+
+.box-bottom span{
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    transform-style: preserve-3d;
+}
+
+.box-bottom span:nth-child(1){
+    transform: rotateY(0deg) translate3d(0,0,-125px);
+}
+.box-bottom span:nth-child(2){
+    transform: rotateY(90deg) translate3d(0,0,125px);
+}
+.box-bottom span:nth-child(3){
+    transform: rotateY(0deg) translate3d(0,0,125px);
+}
+.box-bottom span:nth-child(4){
+    transform: rotateY(90deg) translate3d(0,0,-125px);
+}
+.bottom{
+    width: 250px !important;height: 250px !important;
+    transform: rotateX(90deg) translate3d(0,0,85px);
+}
+
+/* Pizza box - upper */
+
+.box-upper{
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+
+    transform-style: preserve-3d;
+    transform-origin: 0 0 125px;
+    transform: rotateX(0deg);
+
+    transition: .5s;
+}
+.box-upper span{
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    transform-style: preserve-3d;
+}
+
+.box-upper span:nth-child(1){
+    transform: rotateY(0deg) translate3d(0,0,-125px);
+}
+.box-upper span:nth-child(2){
+    transform: rotateY(90deg) translate3d(0,0,125px);
+}
+.box-upper span:nth-child(3){
+    transform: rotateY(90deg) translate3d(0,0,-125px);
+}
+.upper{
+    width: 250px !important;height: 250px !important;
+    transform: rotateX(90deg) translate3d(0,0,125px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    transform: rotate(180deg) translate3d(0,0,1px);
+    width: 50%;
+    height: 50%;
+}
+
+/* Animation */
+
+.pizza-box:hover > .box-upper{
+    transform: rotateX(-150deg);
+    transition: .5s;
+}
+
+/* Colors */
+
+.color_light{
+    background: #bb9c76;
+}
+.color_middle{
+    background: #B68B66;
+}
+.color_dark{
+    background: #83664a;
+}

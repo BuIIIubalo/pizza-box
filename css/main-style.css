@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Bebas Neue', cursive;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+
+    background: #376bc4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
